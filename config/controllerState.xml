@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<controllerState>
+    <controller id="1">
+        <sentCommand>1</sentCommand>
+        <surveillanceCount>18</surveillanceCount>
+        <latencyCount>0</latencyCount>
+    </controller>
+</controllerState>

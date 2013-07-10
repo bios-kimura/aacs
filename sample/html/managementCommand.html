@@ -1,0 +1,185 @@
+<!--
+ The MIT License
+  
+ Copyright (c) 2013 株式会社バイオス (http://www.bios-net.co.jp/index.html)
+  
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software and associated documentation files (the "Software"), to deal
+ in the Software without restriction, including without limitation the rights
+ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
+  
+ The above copyright notice and this permission notice shall be included in
+ all copies or substantial portions of the Software.
+  
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ THE SOFTWARE.
+-->
+<!DOCTYPE html>
+<html lang='ja'>
+<head>
+	<meta charset='utf-8'>
+    <meta name='robots' content='noindex,nofollow'>
+	<title>空調制御コマンド管理</title>
+    <link rel='stylesheet' href='../css/configMenu.css'>
+    <link rel='stylesheet' href='../css/managementCommand.css'>
+    <script src='../js/jquery/jquery-1.8.2.min.js'></script>
+    <script src='../js/configFile.js'></script>
+    <script src='../js/managementCommand.js'></script>
+</head>
+<body>
+    <div id='menu'>
+        <ul class='clearFix'>
+            <li><a href='tempLoggerConfig.html'>温湿度センサー設定</a></li>
+            <li><a href='controllerConfig.html'>コントローラー設定</a></li>
+            <li><a href='linkSensor.html'>温湿度センサーリンク</a></li>
+            <li><a href='managementCommand.html'>空調制御コマンド管理</a></li>
+            <li><a href='systemConfig.html'>システム設定</a></li>
+        </ul>
+    </div>
+	<h2>空調制御コマンド管理</h2>
+    <div id='sensorBox'>
+        <table id='sensorTable'>
+            <tr>
+                <th>温湿度センサー</th>
+            </tr>
+            <tr>
+                <th>
+                    <select id='selectSensor'></select>
+                </th>
+            </tr>
+        </table>
+    </div>
+	<div id='config'>
+		<table id='commandTable'>
+			<tr>
+				<th class='no'>No</th>
+                <th id='commandName'>コマンド名</th>
+				<th class='delete'></th>
+			</tr>
+            <tr>
+                <td>1</td>
+                <td>
+                    <select></select>
+                </td>
+                <td class='deleteBtn'>
+                    <input type='button' value='削除'>
+                    <input type='hidden' value='1'>
+                </td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>
+                    <select></select>
+                </td>
+                <td class='deleteBtn'>
+                    <input type='button' value='削除'>
+                    <input type='hidden' value='2'>
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>
+                    <select></select>
+                </td>
+                <td class='deleteBtn'>
+                    <input type='button' value='削除'>
+                    <input type='hidden' value='3'>
+                </td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>
+                    <select></select>
+                </td>
+                <td class='deleteBtn'>
+                    <input type='button' value='削除'>
+                    <input type='hidden' value='4'>
+                </td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>
+                    <select></select>
+                </td>
+                <td class='deleteBtn'>
+                    <input type='button' value='削除'>
+                    <input type='hidden' value='5'>
+                </td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>
+                    <select></select>
+                </td>
+                <td class='deleteBtn'>
+                    <input type='button' value='削除'>
+                    <input type='hidden' value='6'>
+                </td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>
+                    <select></select>
+                </td>
+                <td class='deleteBtn'>
+                    <input type='button' value='削除'>
+                    <input type='hidden' value='7'>
+                </td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>
+                    <select></select>
+                </td>
+                <td class='deleteBtn'>
+                    <input type='button' value='削除'>
+                    <input type='hidden' value='8'>
+                </td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>
+                    <select></select>
+                </td>
+                <td class='deleteBtn'>
+                    <input type='button' value='削除'>
+                    <input type='hidden' value='9'>
+                </td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>
+                    <select></select>
+                </td>
+                <td class='deleteBtn'>
+                    <input type='button' value='削除'>
+                    <input type='hidden' value='10'>
+                </td>
+            </tr>
+		</table>
+		<br>
+        <div id='saveBox'>
+            <input id='entryBtn' type='button' value='登録'>
+        </div>
+        <p>No.1は運転停止コマンド、No.2は1次コマンド、No.3は2次コマンド専用となります。</p>
+	</div>
+    
+    <div id='commands'>
+        <table id='commandsTable'>
+            <tr>
+                <th>No</th>
+                <th>コマンド名</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

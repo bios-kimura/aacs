@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<controller id="1">
+  <controllerCommand id="1">
+    <command id="1" />
+  </controllerCommand>
+  <controllerCommand id="2">
+    <command id="2" />
+  </controllerCommand>
+  <controllerCommand id="3">
+    <command id="3" />
+  </controllerCommand>
+  <controllerCommand id="4">
+    <command id="4" />
+  </controllerCommand>
+  <controllerCommand id="5">
+    <command id="5" />
+  </controllerCommand>
+  <controllerCommand id="6">
+    <command id="6" />
+  </controllerCommand>
+  <controllerCommand id="7">
+    <command id="7" />
+  </controllerCommand>
+</controller>

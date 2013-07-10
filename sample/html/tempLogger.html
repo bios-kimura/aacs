@@ -1,0 +1,96 @@
+<!--
+ The MIT License
+  
+ Copyright (c) 2013 株式会社バイオス (http://www.bios-net.co.jp/index.html)
+  
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software and associated documentation files (the "Software"), to deal
+ in the Software without restriction, including without limitation the rights
+ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
+  
+ The above copyright notice and this permission notice shall be included in
+ all copies or substantial portions of the Software.
+  
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ THE SOFTWARE.
+-->
+<!DOCTYPE html>
+<html lang='ja'>
+<head>
+    <meta charset='utf-8'>
+	<meta name='robots' content='noindex,nofollow'>
+	<meta name='viewport' content='width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0'>
+	<title>温湿度グラフ</title>
+	<link rel='stylesheet' href='../css/jqplot/jquery.jqplot.min.css'>
+	<link rel='stylesheet' href='../css/mobiscroll/mobiscroll-2.0.min.css'>
+    <link rel='stylesheet' href='../css/jquery-mobile/jquery.mobile-1.1.1.min.css'>
+    <link rel='stylesheet' href='../css/jquery-mobile/icon-pack/jqm-icon-pack-2.0-original.css'>
+    <link rel='stylesheet' href='../css/tempLoggerMenu.css'>
+    <style>
+        #sensorBox, #controlBox {
+            display: none;
+        }
+    </style>
+	<script src='../js/jquery/jquery-1.8.2.min.js'></script>
+	<script src='../js/jqplot/jquery.jqplot.min.js'></script>
+	<!--[if IE]><script language='javascript' src='../js/jqplot/excanvas.min.js'></script><![endif]-->
+    <script src='../js/jqplot/jqplot.highlighter.min.js'></script>
+	<script src='../js/jqplot/jqplot.dateAxisRenderer.min.js'></script>
+	<script src='../js/jqplot/jqplot.canvasTextRenderer.min.js'></script>
+	<script src='../js/jqplot/jqplot.canvasAxisTickRenderer.min.js'></script>
+    <script src='../js/mobiscroll/mobiscroll-2.1.full.min.js'></script>
+	<script src='../js/mobiscroll/mobiscroll.select.js'></script>
+    <script src='../js/jquery-mobile/jquery.mobile-1.1.1.min.js'></script>
+    <script src='../js/dateformat.js'></script>
+    <script src='../js/configFile.js'></script>
+    <script src='../js/tempGraph.js'></script>
+	<script src='../js/tempLogger.js'></script>
+    <script>
+		$(function() {
+			$('#backTempLogger').click(function() {
+				location.href = './RoomAll_Hum.html';
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<div data-role='page' id='page'>
+        <!-- ヘッダ -->
+		<div data-theme='b' data-role='header' data-mini='true'>
+			<h3>温湿度グラフ</h3>
+		</div>
+        
+        <!-- ナビゲーションバー -->
+        <div id='menu'>
+            <ul class='clearFix'>
+                <li><a href='#' name='home' id='home'>ホーム</a></li>
+                <li><a href='#' name='weather' id='weather'>気象</a></li>
+                <li><a  href='#' name='sensor' id='sensor'>場所</a></li>
+                <li><a  href='#' name='historyCal' id='historyCal'>履歴</a></li>
+                <li><a  href='#' name='controlBtn' id='controlBtn'>制御</a></li>
+            </ul>
+            <input  type='hidden' id='historyDate' name='historyDate'>
+            <div id='sensorBox'>
+                <select name='' id='selectSensor' ></select>
+            </div>
+            <div id='controlBox'>
+                <select id='control' ></select>
+            </div>
+        </div>
+		
+        <!-- コンテンツ -->
+		<div data-role='content'>
+			<div id='linechart'></div>
+		</div>
+        
+	</div>
+</body>
+</html>

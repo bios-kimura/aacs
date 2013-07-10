@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<systemConfig>
+  <mail>
+    <from></from>
+    <to></to>
+    <smtp></smtp>
+    <port></port>
+    <user></user>
+    <passwd></passwd>
+  </mail>
+  <cordinator></cordinator>
+  <irReceive></irReceive>
+  <weather></weather>
+  <xbee></xbee>
+</systemConfig>

@@ -1,0 +1,154 @@
+<!--
+ The MIT License
+  
+ Copyright (c) 2013 株式会社バイオス (http://www.bios-net.co.jp/index.html)
+  
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software and associated documentation files (the "Software"), to deal
+ in the Software without restriction, including without limitation the rights
+ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
+  
+ The above copyright notice and this permission notice shall be included in
+ all copies or substantial portions of the Software.
+  
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ THE SOFTWARE.
+-->
+<!DOCTYPE html>
+<html lang='ja'>
+<head>
+    <meta charset='utf-8'>
+    <title>システム設定</title>
+	<meta name='robots' content='noindex,nofollow'>
+    <link rel='stylesheet' href='../css/configMenu.css'>
+    <link rel='stylesheet' href='../css/systemConfig.css'>
+    <script src='../js/jquery/jquery-1.8.2.min.js'></script>
+    <script src='../js/configFile.js'></script>
+	<script src='../js/systemConfig.js'></script>
+</head>
+<body>
+    <div id='menu'>
+        <ul class='clearFix'>
+            <li><a href='tempLoggerConfig.html'>温湿度センサー設定</a></li>
+            <li><a href='controllerConfig.html'>コントローラー設定</a></li>
+            <li><a href='linkSensor.html'>温湿度センサーリンク</a></li>
+            <li><a href='systemConfig.html'>システム設定</a></li>
+        </ul>
+    </div>
+	<h2>システム設定</h2>
+	<div id='config'>
+		<table id='systemTable'>
+			<tr>
+				<th>メール送信元</th>
+                <td><input type='email'></td>
+                <td class='del'>
+                    <input type='button' value='削除'>
+                    <input type='hidden' value='0'>
+                </td>
+			</tr>
+            <tr>
+                <th>メール送信先</th>
+                <td><input type='text'></td>
+                <td class='del'>
+                    <input type='button' value='削除'>
+                    <input type='hidden' value='1'>
+                </td>
+            </tr>
+            <tr>
+                 <th>SMTPサーバホスト名</th>
+                <td><input type='text'></td>
+                <td class='del'>
+                    <input type='button' value='削除'>
+                    <input type='hidden' value='2'>
+                </td>
+            </tr>
+            <tr>
+                <th>SMTPサーバポート番号</th>
+                <td><input type='text'></td>
+                <td class='del'>
+                    <input type='button' value='削除'>
+                    <input type='hidden' value='3'>
+                </td>
+            </tr>
+            <tr>
+                <th>送信元ユーザ名</th>
+                <td><input type='text'></td>
+                <td class='del'>
+                    <input type='button' value='削除'>
+                    <input type='hidden' value='4'>
+                </td>
+            </tr>
+            <tr>
+                <th>送信元パスワード</th>
+                <td><input type='password'></td>
+                <td class='del'>
+                    <input type='button' value='削除'>
+                    <input type='hidden' value='5'>
+                </td>
+            </tr>
+            <tr>
+                <th>コーディネータ　COMポート</th>
+                <td><input type='text'></td>
+                <td class='del'>
+                    <input type='button' value='削除'>
+                    <input type='hidden' value='6'>
+                </td>
+            </tr>
+            <tr>
+                <th>赤外線受信機　COMポート</th>
+                <td><input type='text'></td>
+                <td class='del'>
+                    <input type='button' value='削除'>
+                    <input type='hidden' value='7'>
+                </td>
+            </tr>
+            <tr>
+                <th>温湿度比較</th>
+                <td><select><option value='0'></option></select></td>
+                <td class='del'>
+                    <input type='button' value='削除'>
+                    <input type='hidden' value='8'>
+                </td>
+            </tr>
+            <tr>
+                <th>XBee供給電圧閾値</th>
+                <td>
+                    <select>
+                        <option value='2.1'>2.1V</option>
+                        <option value='2.2'>2.2V</option>
+                        <option value='2.3'>2.3V</option>
+                        <option value='2.4'>2.4V</option>
+                        <option value='2.5'>2.5V</option>
+                        <option value='2.6'>2.6V</option>
+                        <option value='2.7'>2.7V</option>
+                        <option value='2.8'>2.8V</option>
+                        <option value='2.9'>2.9V</option>
+                        <option value='3.0'>3.0V</option>
+                        <option value='3.1'>3.1V</option>
+                        <option value='3.2'>3.2V</option>
+                        <option value='3.3'>3.3V</option>
+                        <option value='3.4'>3.4V</option>
+                        <option value='3.5'>3.5V</option>
+                        <option value='3.6'>3.6V</option>
+                    </select>
+                </td>
+                <td class='del'>
+                    <input type='button' value='削除'>
+                    <input type='hidden' value='9'>
+                </td>
+            </tr>
+		</table>
+		<br>
+        <div id='controlBox'>
+            <input type='button' id='save' value='登録'>
+        </div>
+	</div>
+</body>
+</html>

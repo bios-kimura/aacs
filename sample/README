@@ -1,0 +1,194 @@
+copyright(c) 2013 株式会社バイオス(http://www.bios-net.co.jp/)
+
+----------------------------------------------------------------------
+■始めに
+----------------------------------------------------------------------
+
+このシステムは温湿度センサーにてロギングした温湿度を定期的に監視し、
+閾値を超えた際に空調を制御します。
+
+----------------------------------------------------------------------
+■動作環境
+----------------------------------------------------------------------
+
+このサンプルは以下のOS及びライブラリを用いて動作確認を行っています。
+
+Windows XP Professional SP3
+
+Arduino 1.0.4(http://arduino.cc/en/Main/Software)
+xbee-arduino 0.3(https://code.google.com/p/xbee-arduino/)
+Sleep(https://code.google.com/p/arms22/)
+Watchdog(https://code.google.com/p/arms22/source/browse/#svn/trunk/Watchdog)
+
+log4php(http://logging.apache.org/log4php/)
+
+jQuery(http://jquery.com/download/)
+jQueryMobile(http://jquerymobile.com/download/)
+jQueryUI(http://jqueryui.com/download/)
+jqPlot(https://bitbucket.org/cleonello/jqplot/downloads/)
+Mobiscroll(http://mobiscroll.com/)
+dateformat(http://www.enjoyxstudy.com/javascript/dateformat/)
+
+----------------------------------------------------------------------
+■Arduinoによる空調制御について
+----------------------------------------------------------------------
+
+リモコンから取得したコマンドをCSV形式で格納し、
+それをSDカードから読み込み空調を制御しています。
+サンプルとしてダイキン製エアコンで動作するコマンドを同梱しています。
+
+----------------------------------------------------------------------
+■ディレクトリ構成
+----------------------------------------------------------------------
+
+　/(aacs/sample)
+　|
+　|-空調制御コントローラー_回路図.pdf
+　|
+　|-css
+　| |
+　| |-configMenu.css
+　| |
+　| |-controllerConfig.css
+　| |
+　| |-downloadCsv.css
+　| |
+　| |-linkSensor.css
+　| |
+　| |-managementCommand.css
+　| |
+　| |-systemConfig.css
+　| |
+　| |-tempLoggerConfig.css
+　| |
+　| |-tempLoggerMenu.css
+　| |
+　| |-download
+　|
+　|-html
+　| |
+　| |-download
+　| | |
+　| | |-index.html(温湿度データのダウンロード)
+　| |
+　| |-controllerConfig.html(空調制御コントローラー設定)
+　| |
+　| |-linkSensor.html(温湿度センサー・空調制御コントローラー紐付け設定)
+　| |
+　| |-systemConfig.html(システム設定)
+　| |
+　| |-tempLogger.html(温湿度グラフ)
+　| |
+　| |-tempLoggerConfig.html(温湿度センサー設定)
+　|
+　|-js
+　| |
+　| |-configFile.js
+　| |
+　| |-controllerConfig.js
+　| |
+　| |-linkSensor.js
+　| |
+　| |-managementCommand.js
+　| |
+　| |-systemConfig.js
+　| |
+　| |-tempGraph.js
+　| |
+　| |-tempLogger.js
+　| |
+　| |-tempLoggerConfig.js
+　| |
+　| |-download
+　| | |
+　| | |-downloadCsv.js
+　|
+　|-php
+　| |
+　| |-downloadCsv.php
+　| |
+　| |-requestReceptionist.php
+　| |
+　| |-config
+　| | |
+　| | |-controlCommand.php
+　| | |
+　| | |-controller.php
+　| | |
+　| | |-controllerCommand.php
+　| | |
+　| | |-controllerConfig.php
+　| | |
+　| | |-controllerState.php
+　| | |
+　| | |-linkInfo.php
+　| | |
+　| | |-systemConfig.php
+　| | |
+　| | |-sd
+　| | | |
+　| | | |-controllerCommandSD.php
+　| | |
+　| | |-xml
+　| | | |
+　| | | |-controlCommandXML.php
+　| | | |
+　| | | |-controllerCommandXML.php
+　| | | |
+　| | | |-controllerConfigXML.php
+　| | | |
+　| | | |-controllerStateXML.php
+　| | | |
+　| | | |-linkInfoXML.php
+　| | | |
+　| | | |-systemConfigXML.php
+　| | | |
+　| | | |-tempLoggerConfigXML.php
+　| |
+　| |-dispatchers
+　| | |
+　| | |-dispatcher.php
+　| |
+　| |-sensor
+　| | |
+　| | |-temperatureLog.php
+　|
+　|-ダイキン_コマンド一覧
+　| |
+　| |-1sig.csv(運転停止)
+　| |
+　| |-2sig.csv(25℃暖房)
+　| |
+　| |-3sig.csv(30℃暖房)
+　| |
+　| |-4sig.csv(除湿)
+　| |
+　| |-5sig.csv(27℃冷房)
+　| |
+　| |-6sig.csv(30℃冷房)
+
+----------------------------------------------------------------------
+■ライセンス
+----------------------------------------------------------------------
+
+The MIT License
+ 
+Copyright (c) 2013 株式会社バイオス (http://www.bios-net.co.jp/index.html)
+ 
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+ 
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+ 
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.

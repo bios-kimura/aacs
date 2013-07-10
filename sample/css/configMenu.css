@@ -1,0 +1,86 @@
+/*
+ * The MIT License
+ * 
+ * Copyright (c) 2013 株式会社バイオス (http://www.bios-net.co.jp/index.html)
+ * 
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ * 
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ * 
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
+#menu {
+    width: 100%;
+    display:inline-block;
+    border-top: 1px #cccccc solid;
+    border-right: 1px #cccccc solid;
+    border-bottom: 1px #cccccc solid;
+    background-color: #f9f9f9;
+    font-size: 100%;
+}
+
+#menu ul {
+    margin: 0 auto;
+    padding: 0;
+    list-style-type: none;
+    text-align: center;
+    background-color: #ffffff;
+    border-right: 1px #cccccc solid;
+}
+
+#menu ul li {
+    width: 25%;
+    float: left;
+}
+
+#menu ul li a {
+    display: block;
+    text-decoration: none;
+    padding: 8px 2px;
+    border-left: 1px #cccccc solid;
+}
+
+.clearFix: after {
+    clear: both;
+    display: block;
+    visibility: hidden;
+    height: 0;
+    content: '.';
+}
+
+.clearFix {
+    min-height: 1px;
+}
+
+#menu ul li a:hover {
+    background-color: #dcdcdc;
+}
+
+#menu ul li a:link {
+    color: #000;
+}
+
+#menu ul li a:visited {
+    color: #000;
+
+}
+
+#menu ul li a:hover {
+    color: #000;
+}
+
+#menu ul li a:active {
+    color: #000;
+}
