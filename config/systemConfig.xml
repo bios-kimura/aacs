@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <systemConfig>
   <mail>
-    <from></from>
-    <to></to>
-    <smtp></smtp>
-    <port></port>
-    <user></user>
-    <passwd></passwd>
+    <from>メール送信元アドレス</from>
+    <to>メール送信先アドレス</to>
+    <smtp>メール送信元のSMTPサーバホスト名</smtp>
+    <port>メール送信元のSMTPサーバポート番号</port>
+    <user>メール送信元ユーザ</user>
+    <passwd>メール送信元ユーザパスワード</passwd>
   </mail>
-  <cordinator></cordinator>
-  <irReceive></irReceive>
-  <weather></weather>
-  <xbee></xbee>
+  <cordinator>XBeeコーディネーターCOMポート</cordinator>
+  <irReceive>赤外線受信機COMポート</irReceive>
+  <weather>温湿度データ比較用温湿度センサー</weather>
+  <xbee>XBee供給電圧閾値</xbee>
 </systemConfig>
