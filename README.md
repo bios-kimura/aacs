@@ -125,11 +125,6 @@ XBee-PRO ZB / ワイヤアンテナ型(http://www.switch-science.com/catalog/602
 　| |  
 　| |-log.conf(Pythonのログ出力設定)  
 
-■使用方法
--
-
-python ./aacs/python/airconditioner_controller.pyで実行します。
-
 ■このシステムを使用する前に
 -
 
@@ -179,6 +174,11 @@ XBeeコーディネータのCOMポート
 
 ・必要に応じて動作環境にありますライブラリのインストールを行なって下さい  
 ・必要に応じて温湿度センサー、空調制御コントローラーの用意  
+
+■使用方法
+-
+
+python ./aacs/python/airconditioner_controller.pyで実行します。
 
 ■ライセンス
 -
