@@ -31,7 +31,12 @@ Python 2.7.3(http://www.python.jp/download/)
 pyserial 2.5(http://en.sourceforge.jp/projects/sfnet_pyserial/releases/)  
 python-xbee 2.1.0(https://code.google.com/p/python-xbee/)  
 
-温湿度のロギングにはArduino Unoを用いています。
+温湿度のロギングにはArduino Unoを用いて動作確認を行いました。  
+Arduino Uno R3(http://www.switch-science.com/catalog/789/)  
+Arduino ワイヤレスSDシールド(http://www.switch-science.com/catalog/787/)  
+XBee-PRO ZB / ワイヤアンテナ型(http://www.switch-science.com/catalog/602/)  
+GROVE - ベースシールド(http://www.switch-science.com/catalog/1293/)  
+GROVE - デジタル温度・湿度センサPro(http://www.switch-science.com/catalog/819/)  
 
 空調制御制御には自作Arduinoを用いています。
 
