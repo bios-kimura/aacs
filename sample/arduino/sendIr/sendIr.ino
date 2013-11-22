@@ -54,11 +54,11 @@ void setup() {
   // リセット確認用
   pinMode(8, OUTPUT);
   digitalWrite(8, HIGH);
-  delay(300);
+  delay(10);
   digitalWrite(8, LOW);
-  delay(300);
+  delay(10);
   digitalWrite(8, HIGH);
-  delay(300);
+  delay(10);
   digitalWrite(8, LOW);
 }
 
@@ -155,10 +155,13 @@ void readSignalSDCard(File file, byte *signal) {
   }
 }
 
-void loop() {
+void loop() {  
   // XBeeをスリープから復帰
   pinMode(XBEE_SLEEP_PIN, OUTPUT);
   digitalWrite(XBEE_SLEEP_PIN, LOW);
+  
+  // XBeeの復帰所要時間
+  delay(15);
   
   char recv[2] = {0};
   xbee.readPacket();
@@ -207,7 +210,7 @@ void loop() {
       }
     }
   }
-
+  
   delay(100);
   
   // XBeeスリープ
@@ -218,6 +221,3 @@ void loop() {
   WatchdogClass::timerReset();
   SleepClass::powerDown();
 }
-
-
-   
